@@ -141,7 +141,7 @@ img{
     padding: 15px;
 }
 
-#pozadina{
+#bg{
     display: none;
     position: absolute;
     width: 100%;
@@ -153,5 +153,4 @@ img{
 #info{
     margin-top: 25%;
     margin-bottom: 15%;
-    
 }
