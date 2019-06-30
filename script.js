@@ -3,6 +3,8 @@
 var clicked = [false, false, false, false, false, false, false, false, false];
 var clickedComp = [false, false, false, false, false, false, false, false, false];
 
+
+/*moram popraviti lastMove, komp zadnji klicke, znaci treba biti jedno false ja mislim*/
 function lastMove(){
     for (var i=0; i<9; i++){
         if (!clicked[i])
@@ -98,20 +100,18 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
+                    var rand = parseInt(Math.random() * 9);
                     while(clicked[rand] == true)
-                        rand = Math.random() * 9;
-                    rand = parseInt(rand);
-                    console.log(rand);
+                        rand = parseInt(Math.random() * 9);
+                        
                     clicked[rand] = true;
                     clickedComp[rand] = true;
                     var num = rand + 97;
                     var id = String.fromCharCode(num);
                     $("#" + id).html("<img src=pictures/oks.png>");
-                    }
-                }  
-            checkComputerWin();
-    }
+                }
+            }  
+        }
         else if(played == 1){
             if(clicked[0] == true && clicked[2] == true && clickedComp[0] == false && clickedComp[2] == false)
                 dialog("You won!");
@@ -145,19 +145,17 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
-                    while(clicked[rand] == true)
-                        rand = Math.random() * 9;
-                    rand = parseInt(rand);
-                    console.log(rand);
-                    clicked[rand] = true;
-                    clickedComp[rand] = true;
-                    var num = rand + 97;
-                    var id = String.fromCharCode(num);
-                    $("#" + id).html("<img src=pictures/oks.png>");
+                var rand = parseInt(Math.random() * 9);
+                while(clicked[rand] == true)
+                    rand = parseInt(Math.random() * 9);
+                    
+                clicked[rand] = true;
+                clickedComp[rand] = true;
+                var num = rand + 97;
+                var id = String.fromCharCode(num);
+                $("#" + id).html("<img src=pictures/oks.png>");
                 }
             }
-                checkComputerWin();
         }
         else if(played == 2){
             if(clicked[0] == true && clicked[1] == true && clickedComp[0] == false && clickedComp[1] == false)
@@ -183,14 +181,14 @@ function computerPlay(el){
             else if (clicked[5] == true && clicked[8] == false){
                 var id = String.fromCharCode(105);
                 $("#" + id).html("<img src=pictures/oks.png>");
-                clicked[9] = true;
-                clickedComp[9] = true;
+                clicked[8] = true;
+                clickedComp[8] = true;
             }
             else if (clicked[5] == false && clicked[8] == true){
                 var id = String.fromCharCode(102);
                 $("#" + id).html("<img src=pictures/oks.png>");
-                clicked[6] = true;
-                clickedComp[6] = true;
+                clicked[5] = true;
+                clickedComp[5] = true;
             }
             
             else if (clicked[4] == true && clicked[6] == false){
@@ -206,17 +204,17 @@ function computerPlay(el){
                 clickedComp[4] = true;
             }
             else{   
-                    var rand = Math.random() * 9;
-                    while(clicked[rand])
-                        rand = Math.random() * 9;
-                    clicked[rand] = true;
-                    clickedComp[rand] = true;
-                    var num = rand + 97;
-                    var id = String.fromCharCode(num);
-                    $("#" + id).html("<img src=pictures/oks.png>");
+                var rand = parseInt(Math.random() * 9);
+                while(clicked[rand] == true)
+                    rand = parseInt(Math.random() * 9);
+                    
+                clicked[rand] = true;
+                clickedComp[rand] = true;
+                var num = rand + 97;
+                var id = String.fromCharCode(num);
+                $("#" + id).html("<img src=pictures/oks.png>");
                 }
             }
-                checkComputerWin();
         }
         else if (played == 3){
             if(clicked[0] == true && clicked[6] == true && clickedComp[0] == false && clickedComp[6] == false)
@@ -251,11 +249,10 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
+                    var rand = parseInt(Math.random() * 9);
                     while(clicked[rand] == true)
-                        rand = Math.random() * 9;
-                    rand = parseInt(rand);
-                    console.log(rand);
+                        rand = parseInt(Math.random() * 9);
+                        
                     clicked[rand] = true;
                     clickedComp[rand] = true;
                     var num = rand + 97;
@@ -263,7 +260,6 @@ function computerPlay(el){
                     $("#" + id).html("<img src=pictures/oks.png>");
                 }
             }
-                checkComputerWin();
         }
         else if (played == 4){
             if(clicked[0] == true && clicked[8] == true && clickedComp[0] == false && clickedComp[8] == false)
@@ -308,7 +304,7 @@ function computerPlay(el){
                 clickedComp[6] = true;
             }
             else if (clicked[2] == false && clicked[6] == true){
-                var id = String.fromCharCode(98);
+                var id = String.fromCharCode(99);
                 $("#" + id).html("<img src=pictures/oks.png>");
                 clicked[2] = true;
                 clickedComp[2] = true;
@@ -328,9 +324,10 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
-                    while(clicked[rand])
-                        rand = Math.random() * 9;
+                    var rand = parseInt(Math.random() * 9);
+                    while(clicked[rand] == true)
+                        rand = parseInt(Math.random() * 9);
+                        
                     clicked[rand] = true;
                     clickedComp[rand] = true;
                     var num = rand + 97;
@@ -338,7 +335,6 @@ function computerPlay(el){
                     $("#" + id).html("<img src=pictures/oks.png>");
                 }
             }
-                checkComputerWin();
         }
         else if (played == 5){
             if(clicked[2] == true && clicked[8] == true && clickedComp[2] == false && clickedComp[8] == false)
@@ -373,11 +369,10 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
+                    var rand = parseInt(Math.random() * 9);
                     while(clicked[rand] == true)
-                        rand = Math.random() * 9;
-                    rand = parseInt(rand);
-                    console.log(rand);
+                        rand = parseInt(Math.random() * 9);
+                        
                     clicked[rand] = true;
                     clickedComp[rand] = true;
                     var num = rand + 97;
@@ -385,7 +380,6 @@ function computerPlay(el){
                     $("#" + id).html("<img src=pictures/oks.png>");
                 }
             }
-                checkComputerWin();
         }
         else if (played == 6){
             if(clicked[0] == true && clicked[3] == true && clickedComp[0] == false && clickedComp[3] == false)
@@ -435,20 +429,17 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
+                    var rand = parseInt(Math.random() * 9);
                     while(clicked[rand] == true)
-                        rand = Math.random() * 9;
-                    rand = parseInt(rand);
-                    console.log(rand);
+                        rand = parseInt(Math.random() * 9);
+                        
                     clicked[rand] = true;
                     clickedComp[rand] = true;
                     var num = rand + 97;
                     var id = String.fromCharCode(num);
                     $("#" + id).html("<img src=pictures/oks.png>");
-                    }
                 }
-            checkComputerWin();
-
+            }
         }
         else if(played == 7){
             if(clicked[1] == true && clicked[4] == true && clickedComp[1] == false && clickedComp[4] == false)
@@ -483,11 +474,10 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
+                    var rand = parseInt(Math.random() * 9);
                     while(clicked[rand] == true)
-                        rand = Math.random() * 9;
-                    rand = parseInt(rand);
-                    console.log(rand);
+                        rand = parseInt(Math.random() * 9);
+                        
                     clicked[rand] = true;
                     clickedComp[rand] = true;
                     var num = rand + 97;
@@ -495,8 +485,6 @@ function computerPlay(el){
                     $("#" + id).html("<img src=pictures/oks.png>");
                 }
             }
-            checkComputerWin();
-
         }
         else if(played == 8){
             if(clicked[0] == true && clicked[4] == true && clickedComp[0] == false && clickedComp[4] == false)
@@ -546,11 +534,10 @@ function computerPlay(el){
             }
             
             else{   
-                    var rand = Math.random() * 9;
+                    var rand = parseInt(Math.random() * 9);
                     while(clicked[rand] == true)
-                        rand = Math.random() * 9;
-                    rand = parseInt(rand);
-                    console.log(rand);
+                        rand = parseInt(Math.random() * 9);
+                        
                     clicked[rand] = true;
                     clickedComp[rand] = true;
                     var num = rand + 97;
@@ -558,21 +545,17 @@ function computerPlay(el){
                     $("#" + id).html("<img src=pictures/oks.png>");
                 }
             }
-                checkComputerWin();
         }
+
+        checkComputerWin();
+
         if(lastMove()){
-        if(!checkComputerWin()){
-            dialog("It's draw!");
+            if(!checkComputerWin()){
+                dialog("It's draw!");
+            }
         }
-    }
-    
 }
 
-/*provjeriti da li je zadnji potez*/
-/*provjeravati da li je kompjuter pobjedio*/
-/*provjeravati nerjeseno*/
-/*poredati funkcije tako da ne bude kao da se automatski stavlja i O*/
-/*dodati timer i bodove*/
 
 function checkComputerWin(){
     if (clickedComp[0] == true && clickedComp[1] == true && clickedComp[2] == true){
