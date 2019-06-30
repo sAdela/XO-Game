@@ -4,7 +4,6 @@ var clicked = [false, false, false, false, false, false, false, false, false];
 var clickedComp = [false, false, false, false, false, false, false, false, false];
 
 
-/*moram popraviti lastMove, komp zadnji klicke, znaci treba biti jedno false ja mislim*/
 function lastMove(){
     for (var i=0; i<9; i++){
         if (!clicked[i])
