@@ -4,6 +4,13 @@ var clicked = [false, false, false, false, false, false, false, false, false];
 var clickedComp = [false, false, false, false, false, false, false, false, false];
 
 
+
+var counterWon = 0;
+var counterLost = 0;
+var counterTie = 0;
+
+
+
 function lastMove(){
     for (var i=0; i<9; i++){
         if (!clicked[i])
@@ -54,14 +61,20 @@ function computerPlay(el){
             
             if(clicked[1] == true && clicked[2] == true && clickedComp[1] == false && clickedComp[2] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[3] == true && clicked[6] == true && clickedComp[3] == false && clickedComp[6] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[4] == true && clicked[8] == true && clickedComp[4] == false && clickedComp[8] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
         if(!lastMove()){
@@ -120,10 +133,14 @@ function computerPlay(el){
         else if(played == 1){
             if(clicked[0] == true && clicked[2] == true && clickedComp[0] == false && clickedComp[2] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[4] == true && clicked[7] == true && clickedComp[4] == false && clickedComp[7] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -169,14 +186,20 @@ function computerPlay(el){
         else if(played == 2){
             if(clicked[0] == true && clicked[1] == true && clickedComp[0] == false && clickedComp[1] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[5] == true && clicked[8] == true && clickedComp[5] == false && clickedComp[8] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[4] == true && clicked[6] == true && clickedComp[4] == false && clickedComp[6] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -234,10 +257,14 @@ function computerPlay(el){
         else if (played == 3){
             if(clicked[0] == true && clicked[6] == true && clickedComp[0] == false && clickedComp[6] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[4] == true && clicked[5] == true && clickedComp[4] == false && clickedComp[5] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -283,18 +310,26 @@ function computerPlay(el){
         else if (played == 4){
             if(clicked[0] == true && clicked[8] == true && clickedComp[0] == false && clickedComp[8] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[1] == true && clicked[7] == true && clickedComp[1] == false && clickedComp[7] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[2] == true && clicked[6] == true && clickedComp[2] == false && clickedComp[6] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[3] == true && clicked[5] == true && clickedComp[3] == false && clickedComp[5] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -366,10 +401,14 @@ function computerPlay(el){
         else if (played == 5){
             if(clicked[2] == true && clicked[8] == true && clickedComp[2] == false && clickedComp[8] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[3] == true && clicked[4] == true && clickedComp[3] == false && clickedComp[4] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -415,14 +454,20 @@ function computerPlay(el){
         else if (played == 6){
             if(clicked[0] == true && clicked[3] == true && clickedComp[0] == false && clickedComp[3] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if (clicked[2] == true && clicked[4] == true && clickedComp[2] == false && clickedComp[4] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if (clicked[7] == true && clicked[8] == true && clickedComp[7] == false && clickedComp[8] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -481,10 +526,14 @@ function computerPlay(el){
         else if(played == 7){
             if(clicked[1] == true && clicked[4] == true && clickedComp[1] == false && clickedComp[4] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[6] == true && clicked[8] == true && clickedComp[6] == false && clickedComp[8] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -530,14 +579,20 @@ function computerPlay(el){
         else if(played == 8){
             if(clicked[0] == true && clicked[4] == true && clickedComp[0] == false && clickedComp[4] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[2] == true && clicked[5] == true && clickedComp[2] == false && clickedComp[5] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             else if (clicked[6] == true && clicked[7] == true && clickedComp[6] == false && clickedComp[7] == false){
                 dialog("You won!");
+                counterWon++;
+                $("#won").html(counterWon);
                 return;
             }
             if(!lastMove()){
@@ -599,6 +654,8 @@ function computerPlay(el){
         if(lastMove()){
             if(!checkComputerWin()){
                 dialog("It's draw!");
+                counterTie++;
+                $("#tie").html(counterTie);
             }
         }
 }
@@ -607,34 +664,50 @@ function computerPlay(el){
 function checkComputerWin(){
     if (clickedComp[0] == true && clickedComp[1] == true && clickedComp[2] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     else if (clickedComp[3] == true && clickedComp[4] == true && clickedComp[5] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     else if (clickedComp[6] == true && clickedComp[7] == true && clickedComp[8] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     else if (clickedComp[0] == true && clickedComp[3] == true && clickedComp[6] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     else if (clickedComp[1] == true && clickedComp[4] == true && clickedComp[7] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     else if (clickedComp[2] == true && clickedComp[5] == true && clickedComp[8] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     else if (clickedComp[0] == true && clickedComp[4] == true && clickedComp[8] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     else if (clickedComp[2] == true && clickedComp[4] == true && clickedComp[6] == true){
         dialog("You lose!");
+        counterLost++;
+        $("#lost").html(counterLost);
         return true;
     }
     return false;
